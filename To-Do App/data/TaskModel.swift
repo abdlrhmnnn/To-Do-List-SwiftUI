@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// MARK: - Task Model
+
 struct TaskModel: Identifiable {
     var id = UUID()
     var title: String

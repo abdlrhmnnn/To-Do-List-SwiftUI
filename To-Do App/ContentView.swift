@@ -8,8 +8,6 @@
 import SwiftUI
 import CoreData
 
-
-// MARK: - ContentView
 struct ContentView: View {
     @StateObject private var viewModel = TaskViewModel()
     @State private var showAddTaskView = false

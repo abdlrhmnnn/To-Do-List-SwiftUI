@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// MARK: - ViewModel
+
 class TaskViewModel: ObservableObject {
     @Published var tasks: [TaskModel] = []
 

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// MARK: - AddTaskView
 struct AddTaskView: View {
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject var viewModel: TaskViewModel

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// MARK: - TaskRow
 struct TaskRow: View {
     let task: TaskModel
     let toggleCompletion: () -> Void
@@ -34,7 +33,6 @@ struct TaskRow: View {
     }
 }
 
-// MARK: - Preview
 struct TaskRow_Previews: PreviewProvider {
     static var previews: some View {
         TaskRow(

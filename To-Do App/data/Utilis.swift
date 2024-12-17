@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// MARK: - DateFormatter Extension
+
 extension DateFormatter {
     static var shortDate: DateFormatter {
         let formatter = DateFormatter()
