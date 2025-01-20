@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5095256D2D3DEE070094BCFB /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 5095256C2D3DEE070094BCFB /* Assets.xcassets */; };
+		5095256F2D3DEE1C0094BCFB /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 5095256E2D3DEE1C0094BCFB /* Colors.json */; };
+		509525732D3DF0440094BCFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 509525722D3DF0440094BCFB /* Localizable.strings */; };
+		509525782D3DF2720094BCFB /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509525752D3DF2720094BCFB /* Assets+Generated.swift */; };
+		5095257A2D3DF2720094BCFB /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509525772D3DF2720094BCFB /* Colors+Generated.swift */; };
+		5095257C2D3DF4C00094BCFB /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5095257B2D3DF4C00094BCFB /* Strings+Generated.swift */; };
+		509525812D3DFF220094BCFB /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5095257F2D3DFF220094BCFB /* CoreDataModel.xcdatamodeld */; };
 		50D32AC92D0B7466008D3784 /* ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D32AC82D0B7466008D3784 /* ToDoApp.swift */; };
 		50D32ACB2D0B7466008D3784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D32ACA2D0B7466008D3784 /* ContentView.swift */; };
 		50D32ACD2D0B7469008D3784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D32ACC2D0B7469008D3784 /* Assets.xcassets */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5095256C2D3DEE070094BCFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = text; path = Assets.xcassets; sourceTree = "<group>"; };
+		5095256E2D3DEE1C0094BCFB /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		509525722D3DF0440094BCFB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		509525752D3DF2720094BCFB /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		509525772D3DF2720094BCFB /* Colors+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
+		5095257B2D3DF4C00094BCFB /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		509525802D3DFF220094BCFB /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		50D32AC52D0B7466008D3784 /* To-Do App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D32AC82D0B7466008D3784 /* ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoApp.swift; sourceTree = "<group>"; };
 		50D32ACA2D0B7466008D3784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +60,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5095256B2D3DEDE30094BCFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5095256C2D3DEE070094BCFB /* Assets.xcassets */,
+				509525722D3DF0440094BCFB /* Localizable.strings */,
+				5095256E2D3DEE1C0094BCFB /* Colors.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		509525742D3DF2720094BCFB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				509525752D3DF2720094BCFB /* Assets+Generated.swift */,
+				5095257B2D3DF4C00094BCFB /* Strings+Generated.swift */,
+				509525772D3DF2720094BCFB /* Colors+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		50D32ABC2D0B7465008D3784 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				50D32AC82D0B7466008D3784 /* ToDoApp.swift */,
+				509525742D3DF2720094BCFB /* Generated */,
+				5095256B2D3DEDE30094BCFB /* Resources */,
 				50D32ACA2D0B7466008D3784 /* ContentView.swift */,
 				50D32ADF2D0B8FB4008D3784 /* UI */,
 				50D32ADE2D0B8F97008D3784 /* data */,
@@ -91,6 +127,7 @@
 				50D32AD82D0B7AF2008D3784 /* TaskPriority.swift */,
 				50D32ADA2D0B7B2D008D3784 /* TaskModel.swift */,
 				50D32AD62D0B7AB1008D3784 /* PersistenceController.swift */,
+				5095257F2D3DFF220094BCFB /* CoreDataModel.xcdatamodeld */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -163,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D32AD02D0B7469008D3784 /* Preview Assets.xcassets in Resources */,
+				509525732D3DF0440094BCFB /* Localizable.strings in Resources */,
+				5095256F2D3DEE1C0094BCFB /* Colors.json in Resources */,
 				50D32ACD2D0B7469008D3784 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,12 +216,17 @@
 				50D32AD72D0B7AB1008D3784 /* PersistenceController.swift in Sources */,
 				50D32ADD2D0B8F21008D3784 /* TaskViewModel.swift in Sources */,
 				50D32ACB2D0B7466008D3784 /* ContentView.swift in Sources */,
+				5095257C2D3DF4C00094BCFB /* Strings+Generated.swift in Sources */,
+				509525782D3DF2720094BCFB /* Assets+Generated.swift in Sources */,
 				50D32AE32D0B91B1008D3784 /* AddTaskView.swift in Sources */,
 				50D32ADB2D0B7B2D008D3784 /* TaskModel.swift in Sources */,
 				50D32AD92D0B7AF2008D3784 /* TaskPriority.swift in Sources */,
 				50D32AE12D0B9042008D3784 /* TaskRow.swift in Sources */,
 				50D32AC92D0B7466008D3784 /* ToDoApp.swift in Sources */,
 				50D32AE52D0B9293008D3784 /* Utilis.swift in Sources */,
+				5095256D2D3DEE070094BCFB /* Assets.xcassets in Sources */,
+				5095257A2D3DF2720094BCFB /* Colors+Generated.swift in Sources */,
+				509525812D3DFF220094BCFB /* CoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +432,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5095257F2D3DFF220094BCFB /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				509525802D3DFF220094BCFB /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 509525802D3DFF220094BCFB /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 50D32ABD2D0B7465008D3784 /* Project object */;
 }

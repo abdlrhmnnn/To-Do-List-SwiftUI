@@ -1,0 +1,23 @@
+/*
+ Localizable.strings
+ To-Do App
+ Created by Abdelrahman Mohammed on 20/01/2025.
+*/
+
+"add_task" = "Add Task";
+"title_placeholder" = "Title";
+"description_placeholder" = "Description";
+"due_date_label" = "Due Date";
+"priority_label" = "Priority";
+"save_button" = "Save";
+"cancel_button" = "Cancel";
+"pending_tasks" = "Pending Tasks";
+"completed_tasks" = "Completed Tasks";
+"todo_list" = "To-Do List";
+"error_title_empty" = "Title cannot be empty";
+"error_past_date" = "Due date must be in the future";
+"error_create_task" = "Failed to create task";
+"error_save_task" = "Failed to save task";
+"error_fetch_tasks" = "Failed to fetch tasks: %@";
+"error_delete_task" = "Failed to delete task";
+"error_generic" = "Something went wrong";

@@ -11,33 +11,48 @@ import CoreData
 struct ContentView: View {
     @StateObject private var viewModel = TaskViewModel()
     @State private var showAddTaskView = false
-
+    
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Pending Tasks")) {
-                    ForEach(viewModel.tasks.filter { !$0.isCompleted }) { task in
-                        TaskRow(task: task, toggleCompletion: {
-                            viewModel.toggleTaskCompletion(task: task)
-                        })
+                Section(header: Text(L10n.pendingTasks)) {
+                    ForEach(viewModel.tasks.filter { task in
+                        let isCompleted = task.value(forKey: "isCompleted") as? Bool ?? false
+                        return !isCompleted
+                    }, id: \.self) { task in
+                        TaskRow(task: task) {
+                            viewModel.toggleCompletion(task)
+                        }
                     }
-                    .onDelete(perform: viewModel.deleteTask)
+                    .onDelete { indexSet in
+                        indexSet.forEach { index in
+                            viewModel.deleteTask(viewModel.tasks[index])
+                        }
+                    }
                 }
-
-                Section(header: Text("Completed Tasks")) {
-                    ForEach(viewModel.tasks.filter { $0.isCompleted }) { task in
-                        TaskRow(task: task, toggleCompletion: {
-                            viewModel.toggleTaskCompletion(task: task)
-                        })
+                
+                Section(header: Text(L10n.completedTasks)) {
+                    ForEach(viewModel.tasks.filter { task in
+                        let isCompleted = task.value(forKey: "isCompleted") as? Bool ?? false
+                        return isCompleted
+                    }, id: \.self) { task in
+                        TaskRow(task: task) {
+                            viewModel.toggleCompletion(task)
+                        }
                     }
-                    .onDelete(perform: viewModel.deleteTask)
+                    .onDelete { indexSet in
+                        indexSet.forEach { index in
+                            viewModel.deleteTask(viewModel.tasks[index])
+                        }
+                    }
                 }
             }
-            .navigationTitle("To-Do List")
+            .navigationTitle(L10n.addTask)
             .toolbar {
                 Button(action: { showAddTaskView.toggle() }) {
                     Image(systemName: "plus")
                 }
+                .accessibilityLabel(Text(L10n.addTask))
             }
             .sheet(isPresented: $showAddTaskView) {
                 AddTaskView(viewModel: viewModel)
@@ -48,4 +63,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
 }
